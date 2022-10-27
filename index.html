@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8" content="width=content-width, initial-scale=1">
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./style.css">
+    <title>베일 카운티 메인트 생성</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="https://codepen.io/ninivert/pen/YWVJqO.scss">
     <script src="canvasjs/dist/canvasjs.js"></script>
     <script src="script.js" defer></script>
+  
 
-    
-    <title>Meme Generator with JS</title>
-  </head>
+</head>
+  
   <body>
-   
 
     <h1>Meme Generator</h1>
 
 <div class="box">
-    <script type:"text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
   <div>
     <div id="canvasWrapper">
     </div>
@@ -27,14 +28,7 @@
   
   
   <div>
-    <h3><i class="fa fa-picture-o fa-fw" aria-hidden="true"></i>Source Image</h3>
-    <div class="box">
-      <div>
-        <p>From URL</p>
-        <input id="imgURL" class="block" type="text" placeholder="Link to image" />
-
-      </div>
-    </div>
+  
 
 
     
@@ -42,11 +36,11 @@
     <div class="box">
       <div>
         <p>Top Text</p>
-        <textarea id="textTop" type="text" class="block" placeholder="Top text"></textarea>
+        <input id="textTop" type="text" class="block" placeholder="Top text" />
       </div>
       <div>
         <p>Bottom Text</p>
-        <textarea id="textBottom" type="text" class="block" placeholder="Bottom text"></textarea>
+        <input id="textBottom" type="text" class="block" placeholder="Bottom text" />
       </div>
     </div>
 
@@ -54,7 +48,6 @@
     
     <h3><i class="fa fa-text-height fa-fw" aria-hidden="true"></i>Text Size</h3>
     <div class="box">
-        
       <div>
         <p>Top Text: <span id="textSizeTopOut">10</span></p>
         <input id="textSizeTop" type="range" min="2" max="50" step="2" />
@@ -88,6 +81,7 @@
 
   </div>
 </div>
+
 
   </body>
 </html>
