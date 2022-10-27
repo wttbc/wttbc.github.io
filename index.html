@@ -34,11 +34,6 @@
         <input id="imgURL" class="block" type="text" placeholder="Link to image" />
 
       </div>
-      <div>
-        <p>From Local Disk</p>
-        <input id="imgFile" type="file" accept="image/*"/>
-        <label for="imgFile" class="btn"><i class="fa fa-upload fa-fw"></i></label>
-      </div>
     </div>
 
 
@@ -47,11 +42,11 @@
     <div class="box">
       <div>
         <p>Top Text</p>
-        <input id="textTop" type="text" class="block" placeholder="Top text" />
+        <textarea id="textTop" type="text" class="block" placeholder="Top text"></textarea>
       </div>
       <div>
         <p>Bottom Text</p>
-        <input id="textBottom" type="text" class="block" placeholder="Bottom text" />
+        <textarea id="textBottom" type="text" class="block" placeholder="Bottom text"></textarea>
       </div>
     </div>
 
@@ -59,6 +54,7 @@
     
     <h3><i class="fa fa-text-height fa-fw" aria-hidden="true"></i>Text Size</h3>
     <div class="box">
+        
       <div>
         <p>Top Text: <span id="textSizeTopOut">10</span></p>
         <input id="textSizeTop" type="range" min="2" max="50" step="2" />

@@ -250,7 +250,7 @@ function draw() {
 }
 
 image.src =
-  "https://imgflip.com/s/meme/The-Most-Interesting-Man-In-The-World.jpg";
+  "https://cdn.discordapp.com/attachments/1031367443479793716/1035322543592185866/unknown.png";
 document.getElementById("textSizeTop").value = textSizeTop;
 document.getElementById("textSizeBottom").value = textSizeBottom;
 document.getElementById("textSizeTopOut").innerHTML = textSizeTop;
