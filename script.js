@@ -241,6 +241,7 @@ function draw() {
     "fill"
   );
 
+  ctx.fillStyle = "#000";
   // draw top text
   style("Galmuri14", _textSizeTop, "left", "top");
   var height = ctx.drawBreakingText(top, 3, 3, null, 1, "none").textHeight;
