@@ -1,5 +1,7 @@
 // CAN\NVAS.js plugin
 // ninivert, december 2016
+
+
 (function (window, document) {
   /**
    * CAN\VAS Plugin - Adding line breaks to canvas
@@ -106,13 +108,15 @@ canvas.width = 500;
 canvas.height = 500;
 var ctx = canvas.getContext("2d");
 var padding = 15;
-var textTname = "캐릭터 이름";
+var textTname = "영문 캐릭터 이름";
 var textTop = "캐릭터 노트";
 var textBottom = "오너노트";
-var textSizeTname = 10;
-var textSizeTop = 10;
-var textSizeBottom = 10;
+var textSizeTname = 15;
+var textSizeTop = 20;
+var textSizeBottom = 20;
 var image = document.createElement("img");
+
+
 
 image.onload = function (ev) {
   // delete and recreate canvas do untaint it
@@ -181,7 +185,7 @@ document.getElementById("trueSize").onchange = function (ev) {
 document.getElementById("export").onclick = function () {
   var img = canvas.toDataURL("image/png");
   var link = document.createElement("a");
-  link.download = "My Meme";
+  link.download = "WttBCMainTwt";
   link.href = img;
   link.click();
 
@@ -216,75 +220,59 @@ function draw() {
 
   // styles
   ctx.fillStyle = "#fff";
-  ctx.strokeStyle = "#000";
-  ctx.lineWidth = canvas.width * 0.004;
+ // ctx.strokeStyle = "#000";
+ // ctx.lineWidth = canvas.width * 0.004;
 
-  var _textSizeTname = (textSizeTname / 100) *canvas.width;
-  var _textSizeTop = (textSizeTop / 100) * canvas.width;
-  var _textSizeBottom = (textSizeBottom / 100) * canvas.width;
+  var _textSizeTname = (textSizeTname / 500) *canvas.width;
+  var _textSizeTop = (textSizeTop / 500) * canvas.width;
+  var _textSizeBottom = (textSizeBottom / 500) * canvas.width;
 
  
   //draw Tname text
-  style("Impact", _textSizeTname, "center", "bottom");
+  style("Rajdhani", _textSizeTname, "left", "tname");
   var height = ctx.drawBreakingText(top, 1, 1, null, 1, "none").textHeight;
   console.log(ctx.drawBreakingText(top, 1, 1, null, 1, "none"));
   ctx.drawBreakingText(
     tname,
-    canvas.width / 2,
-    _textSizeTname + padding,
+    265,
+    159,
     null,
     1,
     "fill"
   );
-  ctx.drawBreakingText(
-    tname,
-    canvas.width / 2,
-    _textSizeTname + padding,
-    null,
-    1,
-    "stroke"
-  );
 
   // draw top text
-  style("Impact", _textSizeTop, "center", "top");
+  style("Galmuri14", _textSizeTop, "left", "top");
   var height = ctx.drawBreakingText(top, 3, 3, null, 1, "none").textHeight;
   console.log(ctx.drawBreakingText(top, 3, 3, null, 1, "none"));
   ctx.drawBreakingText(
     top,
-    canvas.width / 2,
-    _textSizeTop + padding,
+    75,
+    195,
     null,
     1,
     "fill"
   );
-  ctx.drawBreakingText(
-    top,
-    canvas.width / 2,
-    _textSizeTop + padding,
-    null,
-    1,
-    "stroke"
-  );
+ // ctx.drawBreakingText(
+  //  top,
+    //canvas.width / 2,
+   // _textSizeTop + padding,
+   // null,
+   // 1,
+   // "stroke"
+ // );
 
   // draw bottom text
-  style("Impact", _textSizeBottom, "center", "top");
+  style("Galmuri14", _textSizeBottom, "right", "bottom");
   var height = ctx.drawBreakingText(bottom, 0, 0, null, 1, "none").textHeight;
   console.log(ctx.drawBreakingText(bottom, 0, 0, null, 1, "none"));
   ctx.drawBreakingText(
     bottom,
-    canvas.width / 2,
-    canvas.height - padding - height,
+    925,
+    140,
     null,
     1,
     "fill"
-  );
-  ctx.drawBreakingText(
-    bottom,
-    canvas.width / 2,
-    canvas.height - padding - height,
-    null,
-    1,
-    "stroke"
   );
 }
 
