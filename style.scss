@@ -9,29 +9,30 @@
   font-family: Galmuri7, sans-serif;
 }
 
-.bos{
+.bos {
   margin: 10px;
   padding: 5px;
   width: 350px;
   outline-style: solid;
   outline-width: 2px;
-  
+
 }
 
 .fullwidth {
-    width: 100%;
-    max-width: 1000px;
-    max-height: 560px;
-  }
-  
-  #imgFile {
-    display: none;
-  }
-  
-  input[type='text'], input[type='range'] {
-    width: 100%;
-  }
-  
-  h3 > i.fa {
-    margin-right: .2em;
-  }
+  width: 100%;
+  max-width: 1000px;
+  max-height: 560px;
+}
+
+#imgFile {
+  display: none;
+}
+
+input[type='text'],
+input[type='range'] {
+  width: 100%;
+}
+
+h3>i.fa {
+  margin-right: .2em;
+}
