@@ -1,11 +1,21 @@
 @import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
 
 .box {
+  display: inline-block;
   font-family: Rajdhani, sans-serif;
   font-family: Galmuri14, sans-serif;
-font-family: Galmuri11, sans-serif;
-font-family: Galmuri9, sans-serif;
-font-family: Galmuri7, sans-serif;
+  font-family: Galmuri11, sans-serif;
+  font-family: Galmuri9, sans-serif;
+  font-family: Galmuri7, sans-serif;
+}
+
+.bos{
+  margin: 10px;
+  padding: 5px;
+  width: 350px;
+  outline-style: solid;
+  outline-width: 2px;
+  
 }
 
 .fullwidth {

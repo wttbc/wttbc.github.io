@@ -115,6 +115,9 @@ var textSizeTname = 15;
 var textSizeTop = 20;
 var textSizeBottom = 20;
 var image = document.createElement("img");
+var TnameColor = "#FF0000";
+var BColor = "#00FF00";
+var TColor = "#0000FF";
 
 
 
@@ -156,6 +159,22 @@ document.getElementById("textBottom").oninput = function (ev) {
   textBottom = this.value;
   draw();
 };
+
+document.getElementById("TnameColor").oninput = function (ev) {
+  TnameColor = this.value;
+  draw();
+};
+
+document.getElementById("BColor").oninput = function (ev) {
+  BColor = this.value;
+  draw();
+};
+
+document.getElementById("TColor").oninput = function (ev) {
+  TColor = this.value;
+  draw();
+};
+
 
 
 document.getElementById("textSizeTname").oninput = function (ev) {
@@ -219,7 +238,7 @@ function draw() {
   ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
   // styles
-  ctx.fillStyle = "#fff";
+
  // ctx.strokeStyle = "#000";
  // ctx.lineWidth = canvas.width * 0.004;
 
@@ -227,7 +246,8 @@ function draw() {
   var _textSizeTop = (textSizeTop / 500) * canvas.width;
   var _textSizeBottom = (textSizeBottom / 500) * canvas.width;
 
- 
+
+  ctx.fillStyle = TnameColor;
   //draw Tname text
   style("Rajdhani", _textSizeTname, "left", "tname");
   var height = ctx.drawBreakingText(top, 1, 1, null, 1, "none").textHeight;
@@ -241,7 +261,7 @@ function draw() {
     "fill"
   );
 
-  ctx.fillStyle = "#000";
+  ctx.fillStyle = TColor;
   // draw top text
   style("Galmuri14", _textSizeTop, "left", "top");
   var height = ctx.drawBreakingText(top, 3, 3, null, 1, "none").textHeight;
@@ -264,6 +284,8 @@ function draw() {
  // );
 
   // draw bottom text
+  ctx.fillStyle = BColor;
+
   style("Galmuri14", _textSizeBottom, "right", "bottom");
   var height = ctx.drawBreakingText(bottom, 0, 0, null, 1, "none").textHeight;
   console.log(ctx.drawBreakingText(bottom, 0, 0, null, 1, "none"));

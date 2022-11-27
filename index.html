@@ -1,99 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>베일 카운티 메인트 생성</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet'>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css">
+<head>
+  <title>베일 카운티 메인트 생성</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css">
 
 
-    <link rel="stylesheet" href="style.scss">
-    <link rel="stylesheet" href="https://codepen.io/ninivert/pen/YWVJqO.scss">
-    <script src="canvasjs/dist/canvasjs.js"></script>
-    <script src="script.js" defer></script>
-  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.scss">
+  <link rel="stylesheet" href="https://codepen.io/ninivert/pen/YWVJqO.scss">
+  <script src="canvasjs/dist/canvasjs.js"></script>
+  <script src="script.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 </head>
-  
-  <body>
 
-    <div class="box">
-      <div>
-        <div id="canvasWrapper">
-        </div>
-      </div>
-    
-      <div>
-        <h3><i class="fa fa-picture-o fa-fw" aria-hidden="true"></i>Source Image</h3>
-        <div class="box">
-          <div>
-            <p>From URL</p>
-            <input id="imgURL" class="block" type="text" placeholder="Link to image" />
-      
-          </div>
-          <div>
-            <p>From Local Disk</p>
-            <input id="imgFile" type="file" accept="image/*" />
-            <label for="imgFile" class="btn"><i class="fa fa-upload fa-fw"></i></label>
-          </div>
-        </div>
-    
-        <h3><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i>Meme Text</h3>
-        <div class="box">
-          <div>
-            <p>Name</p>
-            <textarea id="textTname" type="text" class="block" placeholder="캐릭터 이름"></textarea>
-          </div>
-          <div>
-            <p>Top Text</p>
-            <textarea id="textTop" type="text" class="block" placeholder="Top text"></textarea>
-          </div>
-          <div>
-            <p>Bottom Text</p>
-            <textarea id="textBottom" type="text" class="block" placeholder="Bottom text"></textarea>
-          </div>
-    
-        </div>
-    
-        <h3><i class="fa fa-text-height fa-fw" aria-hidden="true"></i>Text Size</h3>
-        <div class="box">
-          <div>
-            <p>Name: <span id="textSizeTnameOut">10</span></p>
-            <input id="textSizeTname" type="range" min="10" max="30" step="1" />
-          </div>
-          <div>
-            <p>Top Text: <span id="textSizeTopOut">10</span></p>
-            <input id="textSizeTop" type="range" min="10" max="30" step="1" />
-          </div>
-          <div>
-            <p>Bottom Text: <span id="textSizeBottomOut">10</span></p>
-            <input id="textSizeBottom" type="range" min="10" max="30" step="1" />
-          </div>
-        </div>
-    
-        <div class="box">
-          <div>
-            <h3><i class="fa fa-eye fa-fw" aria-hidden="true"></i>Preview Size</h3>
-            <input id="trueSize" type="checkbox" />
-            <label for="trueSize"><span>Show true size</span></label>
-          </div>
-    
-          <div>
-            <h3><i class="fa fa-download fa-fw" aria-hidden="true"></i>Export</h3>
-            <p>If the button doesn't work, right-click the image and save it</p>
-            <p>If you are one mobile, download the source image and directly upload it</p>
-            <button id="export">Export!</button>
-          </div>
-    
-        </div>
-    
+<body>
+
+  <div class="box">
+    <div>
+      <div id="canvasWrapper">
       </div>
     </div>
 
-  </body>
+    <div>
+      <h3><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i>텍스트</h3>
+      <div class="bos">
+        <div>
+          <p>영문 이름</p>
+          <textarea id="textTname" type="text" class="block" placeholder="캐릭터 이름"></textarea>
+        </div>
+        <div>
+          <p>영문 이름 텍스트 사이즈: <span id="textSizeTnameOut">10</span></p>
+          <input id="textSizeTname" type="range" min="10" max="30" step="1" />
+          <p>영문 이름 텍스트 색 (반드시 #를 앞에 포함시켜주세요): </p>
+          <div style="width:75px;">
+            <input id="TnameColor" type="text" class="block" placeholder="#FF0000" />
+          </div>
+        </div>
+      </div>
+      <div class="bos">
+        <div>
+          <p>캐릭터란</p>
+          <textarea id="textBottom" type="text" class="block" placeholder="Bottom text"></textarea>
+        </div>
+        <div>
+          <p>캐릭터란 텍스트 사이즈: <span id="textSizeBottomOut">10</span></p>
+          <input id="textSizeBottom" type="range" min="10" max="30" step="1" />
+          <p>영문 이름 텍스트 색 (반드시 #를 앞에 포함시켜주세요): </p>
+          <div style="width:75px;">
+            <input id="BColor" type="text" class="block" placeholder="#0000FF" />
+          </div>
+        </div>
+      </div>
+      <div class="bos">
+        <p>오너란</p>
+        <textarea id="textTop" type="text" class="block" placeholder="Top text"></textarea>
+        <div>
+          <p>오너란 텍스트 사이즈: <span id="textSizeTopOut">10</span></p>
+          <input id="textSizeTop" type="range" min="10" max="30" step="1" />
+          <p>영문 이름 텍스트 색 (반드시 #를 앞에 포함시켜주세요): </p>
+          <div style="width:75px;">
+
+            <input id="TColor" type="text" class="block" placeholder="#00FF00" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="box" style="margin: 10px;">
+      <div>
+        <h3><i class="fa fa-eye fa-fw" aria-hidden="true"></i>사이즈 미리보기</h3>
+        <input id="trueSize" type="checkbox" />
+        <label for="trueSize"><span>이미지 사이즈 미리보기</span></label>
+      </div>
+
+
+      <div class="box">
+
+        <div>
+          <h3><i class="fa fa-picture-o fa-fw" aria-hidden="true"></i>Source Image</h3>
+          <p>From URL</p>
+          <input id="imgURL" class="block" type="text" placeholder="Link to image" />
+
+        </div>
+        <div>
+          <p>From Local Disk</p>
+          <input id="imgFile" type="file" accept="image/*" />
+          <label for="imgFile" class="btn"><i class="fa fa-upload fa-fw"></i></label>
+        </div>
+      </div>
+
+      <div>
+        <h3><i class="fa fa-download fa-fw" aria-hidden="true"></i>저장</h3>
+        <p>버튼이 작동되지 않는다면 오른쪽 클릭으로 이미지를 저장해주세요.</p>
+        <p>모바일의 경우 이미지를 바로 저장해주세요.</p>
+        <button id="export">저장하기</button>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+
+</body>
+
 </html>
