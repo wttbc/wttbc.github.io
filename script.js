@@ -257,7 +257,7 @@ function draw() {
     "fill"
   );
 
-  // 오너란
+  // 캐릭터란
   ctx.fillStyle = TColor;
   style("Noto Sans KR", _textSizeTop, "left", "top");
   var height = ctx.drawBreakingText(top, 1, 1, null, 1, "none").textHeight;
@@ -272,7 +272,7 @@ function draw() {
   );
 
 
-  // 캐릭터란
+  // 오너란
   ctx.fillStyle = BColor;
   style("Noto Sans KR", _textSizeBottom, "right", "bottom");
   var height = ctx.drawBreakingText(bottom, 1, 1, null, 1, "none").textHeight;
