@@ -26,14 +26,15 @@
       padding: 5px;
       width: 250px;
       outline-style: solid;
-      outline-width: 2px;
+      outline-width: 5px;
+      color: white;
     }
   </style>
 </head>
 
 
 
-<body>
+<body style="background-color: #666;">
 
   <div class="box">
     <div>
@@ -42,7 +43,6 @@
     </div>
 
     <div>
-      <h3><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i>텍스트</h3>
       <div class="cont">
         <p><b>영문 이름</b></p>
         <textarea id="textTname" type="text" class="block" placeholder="캐릭터 이름"></textarea>
@@ -55,7 +55,7 @@
 
       <div class="cont">
         <p><b>캐릭터란</b></p>
-        <textarea id="textBottom" type="text" class="block" placeholder="Bottom text"></textarea>
+        <textarea id="textBottom" type="text" class="block" placeholder="캐릭터란"></textarea>
         <p>사이즈: <span id="textSizeBottomOut">10</span></p>
         <input id="textSizeBottom" type="range" min="10" max="30" step="1" />
         <p>색 (반드시 #를 앞에 포함시켜주세요): </p>
@@ -65,7 +65,7 @@
       </div>
       <div class="cont">
         <p><b>오너란</b></p>
-        <textarea id="textTop" type="text" class="block" placeholder="Top text"></textarea>
+        <textarea id="textTop" type="text" class="block" placeholder="오너란"></textarea>
 
         <p>사이즈: <span id="textSizeTopOut">10</span></p>
         <input id="textSizeTop" type="range" min="10" max="30" step="1" />
@@ -82,14 +82,14 @@
 
 
 
-    <div class="box" style="margin: 10px;">
+    <div class="box" style="margin: 10px; color: white;">
       <div>
         <h3><i class="fa fa-download fa-fw" aria-hidden="true"></i>저장</h3>
         <p>버튼이 작동되지 않는다면 오른쪽 클릭으로 이미지를 저장해주세요.</p>
         <p>모바일의 경우 이미지를 바로 저장해주세요.</p>
         <button id="export">저장하기</button>
       </div>
-      
+
       <div>
         <h3><i class="fa fa-eye fa-fw" aria-hidden="true"></i>사이즈 미리보기</h3>
         <input id="trueSize" type="checkbox" />
