@@ -104,8 +104,8 @@
 var canvas = document.createElement("canvas");
 var canvasWrapper = document.getElementById("canvasWrapper");
 canvasWrapper.appendChild(canvas);
-canvas.width = 500;
-canvas.height = 500;
+canvas.width = 850;
+canvas.height = 476;
 var ctx = canvas.getContext("2d");
 var padding = 15;
 var textTname = "영문 캐릭터 이름";
@@ -227,8 +227,8 @@ function style(font, size, align, base) {
 function draw() {
   // uppercase the text
   var tname = textTname.toUpperCase();
-  var top = textTop.toUpperCase();
-  var bottom = textBottom.toUpperCase();
+  var top = textTop
+  var bottom = textBottom
 
   // set appropriate canvas size
   canvas.width = image.width;
@@ -237,21 +237,17 @@ function draw() {
   // draw the image
   ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-  // styles
-
- // ctx.strokeStyle = "#000";
- // ctx.lineWidth = canvas.width * 0.004;
 
   var _textSizeTname = (textSizeTname / 500) *canvas.width;
   var _textSizeTop = (textSizeTop / 500) * canvas.width;
   var _textSizeBottom = (textSizeBottom / 500) * canvas.width;
 
 
+ //draw Tname text
   ctx.fillStyle = TnameColor;
-  //draw Tname text
   style("Rajdhani", _textSizeTname, "left", "tname");
-  var height = ctx.drawBreakingText(top, 1, 1, null, 1, "none").textHeight;
-  console.log(ctx.drawBreakingText(top, 1, 1, null, 1, "none"));
+  var height = ctx.drawBreakingText(tname, 1, 1, null, 1, "none").textHeight;
+  console.log(ctx.drawBreakingText(tname, 1, 1, null, 1, "none"));
   ctx.drawBreakingText(
     tname,
     265,
@@ -261,11 +257,11 @@ function draw() {
     "fill"
   );
 
+  // 오너란
   ctx.fillStyle = TColor;
-  // draw top text
-  style("Galmuri14", _textSizeTop, "left", "top");
-  var height = ctx.drawBreakingText(top, 3, 3, null, 1, "none").textHeight;
-  console.log(ctx.drawBreakingText(top, 3, 3, null, 1, "none"));
+  style("Noto Sans KR", _textSizeTop, "left", "top");
+  var height = ctx.drawBreakingText(top, 1, 1, null, 1, "none").textHeight;
+  console.log(ctx.drawBreakingText(top, 1, 1, null, 1, "none"));
   ctx.drawBreakingText(
     top,
     75,
@@ -274,21 +270,13 @@ function draw() {
     1,
     "fill"
   );
- // ctx.drawBreakingText(
-  //  top,
-    //canvas.width / 2,
-   // _textSizeTop + padding,
-   // null,
-   // 1,
-   // "stroke"
- // );
 
-  // draw bottom text
+
+  // 캐릭터란
   ctx.fillStyle = BColor;
-
-  style("Galmuri14", _textSizeBottom, "right", "bottom");
-  var height = ctx.drawBreakingText(bottom, 0, 0, null, 1, "none").textHeight;
-  console.log(ctx.drawBreakingText(bottom, 0, 0, null, 1, "none"));
+  style("Noto Sans KR", _textSizeBottom, "right", "bottom");
+  var height = ctx.drawBreakingText(bottom, 1, 1, null, 1, "none").textHeight;
+  console.log(ctx.drawBreakingText(bottom, 1, 1, null, 1, "none"));
   ctx.drawBreakingText(
     bottom,
     925,

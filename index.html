@@ -8,28 +8,17 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css">
 
 
-  <link rel="stylesheet" href="style.scss">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://codepen.io/ninivert/pen/YWVJqO.scss">
   <script src="canvasjs/dist/canvasjs.js"></script>
   <script src="script.js" defer></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <style>
-    div.cont {
-      display: inline-block;
-      margin: 2px;
-      padding: 5px;
-      width: 250px;
-      outline-style: solid;
-      outline-width: 5px;
-      color: white;
-    }
-  </style>
 </head>
 
 
@@ -40,6 +29,7 @@
     <div>
       <div id="canvasWrapper">
       </div>
+      <p></p>
     </div>
 
     <div>
@@ -49,32 +39,37 @@
         <p>사이즈: <span id="textSizeTnameOut">10</span></p>
         <input id="textSizeTname" type="range" min="10" max="30" step="1" />
         <p>색 (반드시 #를 앞에 포함시켜주세요): </p>
+        <div class="restr">
         <input id="TnameColor" type="text" class="block" placeholder="#FF0000" />
+      </div>
         <p></p>
       </div>
 
       <div class="cont">
         <p><b>캐릭터란</b></p>
-        <textarea id="textBottom" type="text" class="block" placeholder="캐릭터란"></textarea>
-        <p>사이즈: <span id="textSizeBottomOut">10</span></p>
-        <input id="textSizeBottom" type="range" min="10" max="30" step="1" />
-        <p>색 (반드시 #를 앞에 포함시켜주세요): </p>
-        <input id="BColor" type="text" class="block" placeholder="#0000FF" />
-        <p></p>
-
-      </div>
-      <div class="cont">
-        <p><b>오너란</b></p>
-        <textarea id="textTop" type="text" class="block" placeholder="오너란"></textarea>
-
+        <textarea id="textTop" type="text" class="block" placeholder="캐릭터란"></textarea>
         <p>사이즈: <span id="textSizeTopOut">10</span></p>
         <input id="textSizeTop" type="range" min="10" max="30" step="1" />
         <p>색 (반드시 #를 앞에 포함시켜주세요): </p>
+        <div class="restr">
         <input id="TColor" type="text" class="block" placeholder="#00FF00" />
+        </div>
+        <p></p>
+      </div>
+
+      <div class="cont">
+        <p><b>오너란</b></p>
+        <textarea id="textBottom" type="text" class="block" placeholder="오너란"></textarea>
+        <p>사이즈: <span id="textSizeBottomOut">10</span></p>
+        <input id="textSizeBottom" type="range" min="10" max="30" step="1" />
+        <p>색 (반드시 #를 앞에 포함시켜주세요): </p>
+        <div class="restr">
+        <input id="BColor" type="text" class="block" placeholder="#0000FF" />
+        </div>
         <p></p>
 
-
       </div>
+
     </div>
 
 

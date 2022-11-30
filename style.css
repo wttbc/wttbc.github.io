@@ -10,6 +10,20 @@
   font-family: Galmuri7, sans-serif;
 }
 
+.cont {
+  display: inline-block;
+  margin: 2px;
+  padding: 5px;
+  width: 250px;
+  outline-style: solid;
+  outline-width: 5px;
+  color: white;
+}
+
+.restr {
+  width: 150px;
+}
+
 .bos {
   margin: 10px;
   padding: 5px;
