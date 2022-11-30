@@ -19,7 +19,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <style>
+    div.cont {
+      background-color: #FF0000;
+      display: inline-block;
+      margin: 2px;
+      padding: 5px;
+      width: 250px;
+      outline-style: solid;
+      outline-width: 2px;
+    }
+  </style>
 </head>
+
+
 
 <body>
 
@@ -31,46 +44,35 @@
 
     <div>
       <h3><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i>텍스트</h3>
-      <div class="bos">
-        <div>
-          <p>영문 이름</p>
-          <textarea id="textTname" type="text" class="block" placeholder="캐릭터 이름"></textarea>
-        </div>
-        <div>
-          <p>영문 이름 텍스트 사이즈: <span id="textSizeTnameOut">10</span></p>
-          <input id="textSizeTname" type="range" min="10" max="30" step="1" />
-          <p>영문 이름 텍스트 색 (반드시 #를 앞에 포함시켜주세요): </p>
-          <div style="width:75px;">
-            <input id="TnameColor" type="text" class="block" placeholder="#FF0000" />
-          </div>
-        </div>
+      <div class="cont">
+        <p>영문 이름</p>
+        <textarea id="textTname" type="text" class="block" placeholder="캐릭터 이름"></textarea>
+        <p>영문 이름 텍스트 사이즈: <span id="textSizeTnameOut">10</span></p>
+        <input id="textSizeTname" type="range" min="10" max="30" step="1" />
+        <p>영문 이름 텍스트 색 (반드시 #를 앞에 포함시켜주세요): </p>
+        <input id="TnameColor" type="text" class="block" placeholder="#FF0000" />
       </div>
-      <div class="bos">
-        <div>
-          <p>캐릭터란</p>
-          <textarea id="textBottom" type="text" class="block" placeholder="Bottom text"></textarea>
-        </div>
-        <div>
-          <p>캐릭터란 텍스트 사이즈: <span id="textSizeBottomOut">10</span></p>
-          <input id="textSizeBottom" type="range" min="10" max="30" step="1" />
-          <p>영문 이름 텍스트 색 (반드시 #를 앞에 포함시켜주세요): </p>
-          <div style="width:75px;">
-            <input id="BColor" type="text" class="block" placeholder="#0000FF" />
-          </div>
-        </div>
+
+      <div class="cont">
+        <p>캐릭터란</p>
+        <textarea id="textBottom" type="text" class="block" placeholder="Bottom text"></textarea>
+        <p>캐릭터란 텍스트 사이즈: <span id="textSizeBottomOut">10</span></p>
+        <input id="textSizeBottom" type="range" min="10" max="30" step="1" />
+        <p>영문 이름 텍스트 색 (반드시 #를 앞에 포함시켜주세요): </p>
+
+        <input id="BColor" type="text" class="block" placeholder="#0000FF" />
+
       </div>
-      <div class="bos">
+      <div class="cont">
         <p>오너란</p>
         <textarea id="textTop" type="text" class="block" placeholder="Top text"></textarea>
-        <div>
-          <p>오너란 텍스트 사이즈: <span id="textSizeTopOut">10</span></p>
-          <input id="textSizeTop" type="range" min="10" max="30" step="1" />
-          <p>영문 이름 텍스트 색 (반드시 #를 앞에 포함시켜주세요): </p>
-          <div style="width:75px;">
 
-            <input id="TColor" type="text" class="block" placeholder="#00FF00" />
-          </div>
-        </div>
+        <p>오너란 텍스트 사이즈: <span id="textSizeTopOut">10</span></p>
+        <input id="textSizeTop" type="range" min="10" max="30" step="1" />
+        <p>영문 이름 텍스트 색 (반드시 #를 앞에 포함시켜주세요): </p>
+        <input id="TColor" type="text" class="block" placeholder="#00FF00" />
+
+
       </div>
     </div>
 
